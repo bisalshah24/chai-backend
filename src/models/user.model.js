@@ -76,4 +76,4 @@ userSchema.methods.generateRefeshToken = () => {
     { expiresIn: process.env.REFRESH_TOKEN_EXPIRY }
   );
 };
-export const User = mongoose.model("User", videoScuseSchemahema);
+export const User = mongoose.model("User", userSchema);
