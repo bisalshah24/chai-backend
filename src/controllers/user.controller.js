@@ -13,7 +13,6 @@ const generateAccessAndRefreshToken = async (userId) => {
     await user.save({ validateBeforeSave: false });
     return { accessToken, refreshToken };
   } catch (error) {
-    console.log(error);
     throw new ApiError(
       500,
       "something went wrong while generating access and refresh token"
@@ -88,7 +87,7 @@ const loginUser = asyncHandler(async (req, res) => {
     user._id
   );
   const loggedInUser = await User.findById(user._id).select(
-    "-password refreshToken"
+    "-password -refreshToken"
   );
   const options = {
     httpOnly: true,

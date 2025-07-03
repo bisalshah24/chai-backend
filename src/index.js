@@ -13,6 +13,7 @@ connectDB()
     console.log("MONGO db connection failed !!! ", err);
   });
 //env
+//error
 /*
 understand this
 Just for demo purposeAdd commentMore actions
