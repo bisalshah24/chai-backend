@@ -2,7 +2,7 @@
   "name": "chai-backend",
   "version": "1.0.0",
   "description": "a backend at chai aur code channel - youtube",
-  "main": "scr/index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
