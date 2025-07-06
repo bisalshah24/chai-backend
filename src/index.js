@@ -12,6 +12,7 @@ connectDB()
   .catch((err) => {
     console.log("MONGO db connection failed !!! ", err);
   });
+//router.route wali line
 //env
 //error
 /*
