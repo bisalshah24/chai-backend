@@ -20,7 +20,6 @@ const createTweet = asyncHandler(async (req, res) => {
 });
 
 const getUserTweets = asyncHandler(async (req, res) => {
-  // TODO: get user tweets
   const { userId } = req.params;
   if (!isValidObjectId(userId)) {
     throw new ApiError(400, "Invalid user ID");
@@ -33,7 +32,6 @@ const getUserTweets = asyncHandler(async (req, res) => {
 });
 
 const updateTweet = asyncHandler(async (req, res) => {
-  //TODO: update tweet
   const { tweetId } = req.params;
   const { content } = req.body;
   if (!isValidObjectId(tweetId)) {
@@ -53,7 +51,6 @@ const updateTweet = asyncHandler(async (req, res) => {
 });
 
 const deleteTweet = asyncHandler(async (req, res) => {
-  //TODO: delete tweet
   const { tweetId } = req.params;
   if (!isValidObjectId(tweetId)) {
     throw new ApiError(400, "Invalid tweet ID");
